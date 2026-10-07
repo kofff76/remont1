@@ -27,7 +27,7 @@ body:after{content:'';position:fixed;inset:9px;z-index:110;pointer-events:none;b
 @media(max-width:700px){body:after{inset:5px}.topbar{padding-inline:12px}.portal-card strong{font-size:21px}.hero-copy h1{font-size:clamp(48px,12vw,84px)}.hero-scene:after{inset:10px}.service-strip__name{font-size:19px}}
 
 /* Full-image background and blue frosted glass */
-.portal{background:#063c57 url('assets/portal-water.png') center/cover no-repeat}
+.portal{background:#063c57 url('assets/portal-sky.png') center/cover no-repeat}
 #waterCanvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .portal:after{content:'';position:absolute;inset:0;background:linear-gradient(#00152535,#00152508 45%,#00152555);pointer-events:none}
 .portal__top,.portal__grid{z-index:2}
@@ -37,3 +37,35 @@ body:after{content:'';position:fixed;inset:9px;z-index:110;pointer-events:none;b
 .portal-card:hover{background:linear-gradient(140deg,#ade3ff55,#20639688);box-shadow:inset 0 1px #fff9,0 0 28px #64c4ff55}
 .portal-card strong{text-shadow:0 2px 10px #00101f}
 .portal-curtain canvas{visibility:hidden}
+/* VIP catalogue */
+.price-section{background:linear-gradient(135deg,#f9fcff,#e8f2fb);padding-inline:4vw}
+.price-intro,.service-stack{max-width:1440px}
+.service-stack{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.vip-card{position:relative;aspect-ratio:1;min-width:0;border:1px solid #efb537;border-radius:12px;padding:24px 18px 18px;display:flex;align-items:center;justify-content:center;flex-direction:column;background:linear-gradient(140deg,#447eaa,#224f7b 55%,#143856);color:#fff;box-shadow:inset 0 1px #c7e7ff50,0 12px 24px #183f6617;transition:transform .25s,box-shadow .25s}
+.vip-card:hover{transform:translateY(-5px);box-shadow:0 16px 30px #183f6633,inset 0 0 20px #eec16315}
+.vip-card img{width:30%;height:30%;object-fit:contain;filter:drop-shadow(0 4px 8px #051d3870)}
+.vip-card h3{font:500 clamp(17px,1.5vw,24px)/1.2 Georgia,serif;margin:14px 0 10px;max-width:100%;overflow-wrap:anywhere}
+.vip-card strong{font-size:clamp(16px,1.5vw,23px);color:#ffca57}
+.vip-card__number{position:absolute;left:15px;top:12px;font-size:10px;letter-spacing:.15em;color:#ffd271}
+.vip-card__more{font-size:10px;letter-spacing:.08em;margin-top:14px;color:#d8e9f6}
+#serviceDialog{width:min(740px,92vw);max-height:88svh;overflow:auto;border:2px solid #efb537;border-radius:16px;background:#f4f9ff;color:#173957;padding:40px;box-shadow:0 30px 100px #0008}
+#serviceDialog::backdrop{background:#061e39bb;backdrop-filter:blur(10px)}
+#serviceDialog small{display:block;font-size:10px;letter-spacing:.15em;color:#8a6418;padding-right:32px}
+#serviceDialog h2{font:500 clamp(28px,4vw,44px)/1.1 Georgia,serif;margin:20px 0}
+#detailPrice{font-size:30px;color:#935600}
+#serviceDialog p,#serviceDialog li{font-size:14px;line-height:1.65}
+#serviceDialog li{margin-bottom:9px}
+#serviceDialog ul{padding-left:22px}
+#serviceDialog h3{margin-top:26px;font-size:18px}
+.detail-close{position:absolute;right:14px;top:12px;width:36px;height:36px;border:1px solid #c39b47;border-radius:50%;background:#fff;color:#153958;font-size:26px}
+.detail-caption{color:#667d90}
+.detail-note{padding:18px;border:1px solid #d3b779;background:#e6eff8;border-radius:10px}
+.detail-note p{margin-bottom:0}
+#requestText{width:100%;padding:12px;border:1px solid #adc3d5;background:white;border-radius:8px;color:#173957;font:14px/1.5 Arial,sans-serif;resize:vertical;margin-bottom:14px}
+@media(max-width:1000px){.service-stack{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.vip-card{padding:20px 12px}.vip-card h3{font-size:20px}}
+@media(max-width:700px){.service-stack{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.vip-card{padding:20px 10px 14px;aspect-ratio:auto;min-height:220px}.vip-card img{width:56px;height:56px}.vip-card h3{font-size:17px}.vip-card strong{font-size:16px}.vip-card__more{font-size:9px;margin-top:10px}#serviceDialog{padding:28px 20px}.portal__top p{font-size:8px;letter-spacing:.1em}}
+
+/* v8: open sky home screen, navigation only inside categories */
+.portal__top{top:0;height:50%}
+.portal:after{background:linear-gradient(#032e5810,#032e5800 45%,#032e5820)}
+@media(max-width:700px){.portal__top{top:0;height:42%}}
